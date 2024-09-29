@@ -2,9 +2,15 @@ public class MyArrays {
   public static void main(String args[]) {
     // arrays to test
     // test cases
-    //System.out.println("Expected: [0, 1, 2, 3] vs my function: " + returnCopy([0, 1, 2, 3]));
-    //System.out.println("Expected: [10, 9, 8, 1, 2, 3] vs my function: " + concatArray([10, 9, 8]));
+    int[] tstAry1 = new int[] {0, 1, 2, 3};
+    int[] tstAry2 = new int[] {10, 9, 8, 7};
+    System.out.println("Expected: [0, 1, 2, 3] vs my function: " + aryToString(returnCopy(tstAry1)));
+    System.out.println("Expected: [10, 9, 8, 7, 0, 1, 2, 3] vs my function: " + aryToString(concatArray(tstAry2, tstAry1)));
+
+    System.out.println("Expected: [10, 9, 8, 7] vs my function: " + aryToString(returnCopy(tstAry2)));
+    System.out.println("Expected: [0, 1, 2, 3, 10, 9, 8, 7] vs my function: " + aryToString(concatArray(tstAry1, tstAry2)));
   }
+  
   public static String aryToString(int[] nums) {
     String ans = "[";
     for (int i = 0; i < nums.length; i++) {
