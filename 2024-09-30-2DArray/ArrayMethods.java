@@ -3,7 +3,7 @@
 
 public class ArrayMethods{
   public static void main(String args[]){
-
+    /*
     // test cases for 1D arrToString
     System.out.println("Expected: [2, 3, 4, 9] vs my function: " + arrToString(new int[] {2, 3, 4, 9}));
     System.out.println("Expected: [10, 42, 1, 124] vs my function: " + arrToString(new int[] {10, 42, 1, 124}));
@@ -19,8 +19,37 @@ public class ArrayMethods{
     // test cases for swapRC
     System.out.println("Expected: [[1, 4], [2, 5], [3, 6]] vs my function: " + arrToString(swapRC(new int[][]{{1, 2 , 3}, {4, 5 , 6}})));
     System.out.println("Expected: [[9, 8], [3, 2], [7, 4]] vs my function: " + arrToString(swapRC(new int[][]{{9, 3, 7}, {8, 2, 4}})));
+    
 
-    //System.out.println("Expected: [[1, 0, 0], [0, 1, 0]] vs my function: " + replaceNegative(new int[][] {{-2, -3, -2}, {-9, -239, -10}}));
+    // test cases for replaceNegative
+    System.out.print("Expected: [[1, 0, 0], [0, 1, 0]] vs my function: "); 
+    replaceNegative(new int[][] {{-2, -3, -2}, {-9, -239, -10}});
+
+    System.out.print("Expected: [[1, 0, 0], [0, 1, 0]] vs my function: "); 
+    replaceNegative(new int[][] {{-10, -52, -20}, {-6, -621, 0}});
+
+    System.out.print("Expected: [[1, 0, 0], [0, 1, 0]] vs my function: "); 
+    replaceNegative(new int[][] {{-5, -6, -12}, {-833, -123, -4}});
+    */
+
+    // test cases for copy
+    int[][] testCase1 = new int[][] { { 1, 2, 3, 4, 5}, {6, 7, 8, 9, 10} };
+    int[][] copiedTestCase1 = copy(testCase1);
+    System.out.println("Expected: [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]] vs my function: " + arrToString(copiedTestCase1));
+    testCase1 = new int[][] { {1, 2}, {3, 4}};
+    System.out.println("Original array changed. Copied array: " + arrToString(copiedTestCase1));
+
+    int[][] testCase2 = new int[][] { {5, 4, 3, 2, 1}, {10, 9, 8, 7, 6} };
+    int[][] copiedTestCase2 = copy(testCase2);
+    System.out.println("Expected: [[5, 4, 3, 2, 1], [10, 9, 8, 7, 6]] vs my function: " + arrToString(copiedTestCase2));
+    testCase2 = new int[][] { {5, 4}, {10, 9}};
+    System.out.println("Original array changed. Copied array: " + arrToString(copiedTestCase2));
+
+    int[][] testCase3 = new int[][] { {0, 3, 6, 9, 12}, {0, 2, 4, 6, 8} };
+    int[][] copiedTestCase3 = copy(testCase3);
+    System.out.println("Expected: [[0, 3, 6, 9, 12], [0, 2, 4, 6, 8]] vs my function: " + arrToString(copiedTestCase3));
+    testCase3 = new int[][] { {0, 3}, {0, 2}};
+    System.out.println("Original array changed. Copied array: " + arrToString(copiedTestCase3));
   }
 
   public static String arrToString(int[] nums) {
@@ -89,6 +118,10 @@ public class ArrayMethods{
   //You SHOULD write a helper method for this.
   //If you don't see a good way to do that, you should stop and look at prior methods.
   public static int[][] copy(int[][] nums){
-    return null;//placeholder so it compiles
+    int[][] copyArr = new int[nums.length][];
+    for (int i = 0; i < nums.length; i++) {
+      copyArr[i] = MyArrays.returnCopy(nums[i]);
+    }
+    return copyArr;
   }
 }
