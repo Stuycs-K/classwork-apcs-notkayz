@@ -10,6 +10,7 @@ public class ArrayDemo {
     System.out.println("Expected: " + Arrays.toString(new int[] {2, 3, 4, 9}) + " vs my function: " + arrToString(new int[] {2, 3, 4, 9}));
     System.out.println("Expected: " + Arrays.deepToString(new int[][]{{2, 3, 4}, {5, 6, 7}, {2, 4, 9}}) + " vs my function: " + arrToString(new int[][]{{2, 3, 4}, {5, 6, 7}, {2, 4, 9}}));
     System.out.println("Expected: 5 vs my function: " + countZeros2D(new int[][] { {0, 7, 9, 2}, {0, 0, 1, 0}, {0, 3, 8} }));
+    System.out.println("Expected: <table><tr><td>0</td><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td><td>5</td></tr></table> vs my function: " + htmlTable(new int[][] { {0, 1, 2}, {3, 4, 5}}));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -123,6 +124,16 @@ public class ArrayDemo {
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
   public static String htmlTable(int[][]nums){
-    return "";
+    String ans = "<table>";
+    for (int i = 0; i < nums.length; i++) {
+      ans += "<tr>";
+      for (int j = 0; j < nums[i].length; j++) {
+        ans += "<td>";
+        ans += nums[i][j];
+        ans += "</td>";
+      }
+      ans += "</tr>";
+    }
+    return ans + "</table>";
   }
 }
