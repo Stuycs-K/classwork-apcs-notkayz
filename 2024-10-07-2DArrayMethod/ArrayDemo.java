@@ -9,8 +9,18 @@ public class ArrayDemo {
     // Arrays.toString vs my arrToString
     System.out.println("Expected: " + Arrays.toString(new int[] {2, 3, 4, 9}) + " vs my function: " + arrToString(new int[] {2, 3, 4, 9}));
     System.out.println("Expected: " + Arrays.deepToString(new int[][]{{2, 3, 4}, {5, 6, 7}, {2, 4, 9}}) + " vs my function: " + arrToString(new int[][]{{2, 3, 4}, {5, 6, 7}, {2, 4, 9}}));
-    System.out.println("Expected: 5 vs my function: " + countZeros2D(new int[][] { {0, 7, 9, 2}, {0, 0, 1, 0}, {0, 3, 8} }));
+
+    // test cases for countZeros2D
+    System.out.println("Array: [[0, 7, 9, 2], [0, 0, 1, 0], [0, 3, 8]] || Expected Result: 5 vs my function: " + countZeros2D(new int[][] { {0, 7, 9, 2}, {0, 0, 1, 0}, {0, 3, 8} }));
+    System.out.println("Array: [[10, 0, 8, 2], [0, 9, 1, 2], [2, 8, 3]] || Expected Result: 2 vs my function: " + countZeros2D(new int[][] { {10, 0, 8, 2}, {0, 9, 1, 2}, {2, 8, 3}}));
+    System.out.println("Array: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]] || Expected Result: 12 vs my function: " + countZeros2D(new int[][] { {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}}));
+
+    // test cases for htmlTable
     System.out.println("Expected: <table><tr><td>0</td><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td><td>5</td></tr></table> vs my function: " + htmlTable(new int[][] { {0, 1, 2}, {3, 4, 5}}));
+    System.out.println("Are they the same? " + "<table><tr><td>0</td><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td><td>5</td></tr></table>".equals(htmlTable(new int[][] { {0, 1, 2}, {3, 4, 5}})));
+
+    System.out.println("Expected: <table><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr><tr><td>5</td><td>6</td></tr></table> vs my function: " + htmlTable(new int[][] { {1, 2}, {3, 4}, {5, 6}}));
+    System.out.println("Are they the same? " + "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr><tr><td>5</td><td>6</td></tr></table>".equals(htmlTable(new int[][] { {1, 2}, {3, 4}, {5, 6}})));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
