@@ -2,15 +2,15 @@ public class Point{
   private double x,y;
 
   public String toString(){
-    return "(" + getX + ", " + getY + ")";
+    return "(" + x + ", " + y + ")";
   }
 
   //Initialize this Point to have the same values as the other Point.
   public Point(Point other){
     //COMPLETE THIS SECOND
     //Then write test cases.
-    x = other.getX;
-    y = other.getY;
+    x = other.getX();
+    y = other.getY();
   }
 
   //Initialize this Point to have the provided values
@@ -29,7 +29,7 @@ public class Point{
   Write this method FOURTH, go to the main and do that one first.
   */
   public double distanceTo(Point other){
-    return Math.sqrt(Math.expt((x - other.x), 2) + Math.expt((y - other.y), 2));
+    return Math.sqrt(Math.pow((x - other.x), 2) + Math.pow((y - other.y), 2));
   }
 
   /*
