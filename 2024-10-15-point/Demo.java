@@ -25,11 +25,11 @@ public class Demo{
     System.out.println(Point.distance(p4, p6));
     System.out.println(p5.distanceTo(p5));
 
-    Point t1 = new Point(0, 0);
-    Point t2 = new Point(1, 0);
-    Point t3 = new Point((t2.getX() - t1.getX()) / 2, Math.sqrt(1 - ((t2.getX() - t1.getX()) / 2)));
-    System.out.println(t1);
-    System.out.println(t2);
-    System.out.println(t3);
+    Point t1 = new Point(0,0);
+    Point t2 = new Point(1,0);
+    Point t3 = new Point(0.5, Math.sqrt(1 - Math.pow(0.5, 2)));
+    System.out.println(distance(t1, t2));
+    System.out.println(distance(t2, t3));
+    System.out.println(distance(t3, t1));
   }
 }
