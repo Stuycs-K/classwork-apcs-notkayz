@@ -10,15 +10,21 @@ public class ReadFile {
     try {
       File file = new File("ReadFile.java");//1
       Scanner input = new Scanner(file);
-      boolean other = true;
+      // boolean other = true;
+      // while(input.hasNextLine()) {
+      //   if (other) {
+      //     System.out.println(input.nextLine());
+      //     other = false;
+      //   }
+      //   else {
+      //     input.nextLine();
+      //     other = true;
+      //   }
+      // }
       while(input.hasNextLine()) {
-        if (other) {
-          System.out.println(input.nextLine());
-          other = false;
-        }
-        else {
-          input.nextLine();
-          other = true;
+        String e = input.nextLine();
+        if (e.contains("{")) {
+          System.out.println(e);
         }
       }
       //CODE THAT SCANS THE FILE.
