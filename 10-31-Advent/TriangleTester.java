@@ -5,13 +5,18 @@ import java.util.Scanner;
 public class TriangleTester {
 
   public static int countTrianglesA(String filename) {
-    int res = 0;
     try {
+      int res = 0;
       File file = new File(filename);
       Scanner input = new Scanner(file);
+      
       while (input.hasNextLine()) {
-        if (isTriangle(input.nextDouble(), input.nextDouble(), input.nextDouble()))
+        double a = input.nextDouble();
+        double b = input.nextDouble();
+        double c = input.nextDouble();
+        if (isTriangle(a, b, c)) {
           res++;
+        }
       }
       input.close();
       return res;
@@ -34,5 +39,6 @@ public class TriangleTester {
     System.out.println(isTriangle(5, 100, 5));
     System.out.println(isTriangle(3, 4, 5));
     System.out.println(isTriangle(1, 1, 1));
+    System.out.println(countTrianglesA("inputTri.txt"));
   }
 }
