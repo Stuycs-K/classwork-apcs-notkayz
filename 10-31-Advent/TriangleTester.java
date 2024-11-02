@@ -3,9 +3,6 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class TriangleTester {
-  public static void main(String[] args) {
-
-  }
 
   public static int countTrianglesA(String filename) {
     int res = 0;
@@ -29,5 +26,13 @@ public class TriangleTester {
       return true;
     }
     return false;
+  }
+
+  public static void main(String[] args) {
+    // test cases for isTriangle
+    System.out.println(isTriangle(5, 10, 25));
+    System.out.println(isTriangle(5, 100, 5));
+    System.out.println(isTriangle(3, 4, 5));
+    System.out.println(isTriangle(1, 1, 1));
   }
 }
