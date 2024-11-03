@@ -6,31 +6,44 @@ public class TriangleTester {
 
   public static int countTrianglesA(String filename) {
     try {
-      int res = 0;
-      File file = new File(filename);
-      Scanner input = new Scanner(file);
-      
-      while (input.hasNextLine()) {
+      File newFile = new File (filename);
+      Scanner input = new Scanner(newFile);
+
+      int counter = 0;
+
+      while (input.hasNextLine() && input.hasNextDouble()) {
         double a = input.nextDouble();
         double b = input.nextDouble();
         double c = input.nextDouble();
         if (isTriangle(a, b, c)) {
-          res++;
+          counter++;
         }
       }
       input.close();
-      return res;
-    } catch (FileNotFoundException e) {
+      return counter;
+    } 
+    catch (FileNotFoundException ex) {
       System.out.println("File not found");
       return -1;
     }
   }
 
   public static boolean isTriangle(double a, double b, double c) {
-    if (a + b > c && b + c > a && c + a > b) {
-      return true;
+    return ((a + b > c) && (a + c > b) && (b + c > a));
+  }
+
+  public static int countTrianglesB(String filename) {
+    try {
+      File newFile = new File (filename);
+      Scanner input = new Scanner (newFile);
+
+      int counter = 0; 
+      return counter;
     }
-    return false;
+    catch (FileNotFoundException ex) {
+      System.out.println("File Not Found");
+      return -1;
+    }
   }
 
   public static void main(String[] args) {
