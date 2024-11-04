@@ -75,9 +75,10 @@ public class TriangleTester {
     System.out.println(isTriangle(1, 1, 1));
 
     // countTrianglesA test
-    // System.out.println(countTrianglesA("inputTri.txt"));
+    System.out.println("Expected: 2 ; Result: " + countTrianglesA("inputA.txt"));
+    System.out.println("Expected: 983 ; Result: " + countTrianglesA("inputTri.txt"));
 
     // countTrianglesB test
-    System.out.println(countTrianglesB("inputTri.txt"));
+    System.out.println("Expected: 1836 ; Result: " + countTrianglesB("inputTri.txt"));
   }
 }
