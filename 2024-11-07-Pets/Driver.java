@@ -16,6 +16,8 @@ public class Driver{
     Bird b1 = new Bird("caw caw", 2, "raven", 25, "black");
     // Bird b2 = new Animal("meow", 3, "birb"); this one doesnt work 
     Animal a2 = new Bird("chirp chirp", 2, "max", 20, "blue");
-
+    a1.speak();
+    b1.speak();
+    a2.speak();
   }
 }
