@@ -1,6 +1,9 @@
 /* When calling .speak() with the Bird object, it accesses the overriden version of getName(),
    instead of the original getName() in the Animal Class. However if you call the .speak() method
    with an Animal object, it will use the original getName(). */
+/* The Bird b2 = new Animal does not work, because the super-class, Animal, is not a Bird, 
+   the sub-class. Although a Bird is-a Animal, the contrary is not true. Bird hard more features 
+   that cannot be fufilled by the animal class. */
 public class Driver{
   public static void main(String[] args){
     Animal toucan = new Animal("squack", 5, "Lenny");
