@@ -26,7 +26,7 @@ public class ArrayListPractice {
     System.out.println(original.size());
     ArrayList<String>result = new ArrayList<String>(original.size());
     for (int i = original.size() - 1; i >= 0; i--) {
-      result.add(i, original.get(i));
+      result.add(original.get(i));
     }
     return result;
   }
