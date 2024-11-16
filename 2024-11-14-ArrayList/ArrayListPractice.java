@@ -40,7 +40,7 @@ public class ArrayListPractice {
       result.add(b.get(i));
     }
     if (a.size() < b.size()) {
-      result.addAll(a.subList(shorterLength, a.size()));
+      result.addAll(b.subList(shorterLength, b.size()));
     }
     else {
       result.addAll(a.subList(shorterLength, a.size()));
