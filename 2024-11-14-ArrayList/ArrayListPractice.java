@@ -14,6 +14,7 @@ public class ArrayListPractice {
     }
     return result;
   }
+
   public static void replaceEmpty(ArrayList<String>original) {
     for (int i = 0; i <original.size(); i++) {
       if (original.get(i).equals("")) {
@@ -27,6 +28,22 @@ public class ArrayListPractice {
     ArrayList<String>result = new ArrayList<String>(original.size());
     for (int i = original.size() - 1; i >= 0; i--) {
       result.add(original.get(i));
+    }
+    return result;
+  }
+
+  public static ArrayList<String>mixLists(ArrayList<String> a, ArrayList<String> b) {
+    int shorterLength = Math.min(a.size(), b.size());
+    ArrayList<String>result = new ArrayList<String>(a.size() + b.size());
+    for (int i = 0; i < shorterLength; i++) {
+      result.add(a.get(i));
+      result.add(b.get(i));
+    }
+    if (a.size() < b.size()) {
+      result.addAll(a.subList(shorterLength, a.size()));
+    }
+    else {
+      result.addAll(a.subList(shorterLength, a.size()));
     }
     return result;
   }
