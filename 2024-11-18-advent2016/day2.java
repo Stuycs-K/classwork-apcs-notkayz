@@ -10,9 +10,21 @@ public class day2 {
       String passcode = "";
 
       while(input.hasNextLine()) {
-        int digit = 0;
+        int digit = 5;
         String line = input.nextLine();
-        System.out.println(line);
+        // System.out.println(line);
+        for (int i = 0; i < line.length(); i++) {
+          if (line.charAt(i) == "L") {
+            if (!digit % 3 == 1) {
+              digit--;
+            }
+          }
+          // if (line.charAt(i) == "U") {
+          //   if (!digit % 3 == 1) {
+          //     digit--;
+          //   }
+          // }
+        }
       }
 
       input.close();
