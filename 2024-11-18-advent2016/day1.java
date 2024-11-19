@@ -9,9 +9,13 @@ public class day1 {
       int distance = 0;
       File f1 = new File (filename);
       Scanner input = new Scanner(f1);
-      while (input.hasNext)
-      String[] moves = input.split(",");
-      System.out.println(moves.toString());
+      while (input.hasNextLine()) {
+        String line = input.nextLine();
+        String[] moves = line.split(",");
+        // for (int i = 0; i < moves.length; i++) {
+        //   System.out.println(moves[i]);
+        // }
+      }
       input.close();
       return distance;
     }
