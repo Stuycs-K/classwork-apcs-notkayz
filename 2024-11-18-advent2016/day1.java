@@ -8,98 +8,37 @@ public class day1 {
     try {
       int x = 0;
       int y = 0;
-      int direction = 0;
+      int dir = 0;
       File f1 = new File(filename);
       Scanner input = new Scanner(f1);
 
-      while (input.hasNextLine()) {
+      while (input.hasNext()) {
         String line = input.nextLine();
-        String[] moves = line.split(",");
+        String[] moves = line.split(", ");
         for (int i = 0; i < moves.length; i++) {
-          // // System.out.println(moves[i].substring(2));
-          // if (!moves[i].substring(2).isEmpty()) {
-          // int forwardSteps = Integer.parseInt(moves[i].substring(2));
-          // String lOrR = moves[0];
-          // if (lOrR == "R") {
-          // dir++;
-          // } else if (lOrR == "L") {
-          // dir += 3;
-          // }
-          // if (dir % 4 == 0) {
-          // y += forwardSteps;
-          // }
-          // if (dir % 4 == 1) {
-          // x += forwardSteps;
-          // }
-          // if (dir % 4 == 2) {
-          // y -= forwardSteps;
-          // }
-          // if (dir % 4 == 3) {
-          // x -= forwardSteps;
-          // }
-          // }
-          // }
-        if (direction % 4 == 0) {
-          if (moves[i].contains("R")) {
-            direction++;
-            if (!moves[i].substring(2).isEmpty()) {
-              x += Integer.parseInt(moves[i].substring(2));
-            }
+          String leftOrRight = moves[i].substring(0, 1);
+          int distance = Integer.parseInt(moves[i].substring(1));
+          // System.out.println(leftOrRight + "+" + distance);
+          if (leftOrRight.equals("R")) {
+            dir++;
           }
-          if (moves[i].contains("L")) {
-            direction += 3;
-            if (!moves[i].substring(2).isEmpty()) {
-              x -= Integer.parseInt(moves[i].substring(2));
-            }
+          if (leftOrRight.equals("L")) {
+            dir += 3;
           }
-        }
-
-        if (direction % 4 == 1) {
-          if (moves[i].contains("R")) {
-            direction++;
-            if (!moves[i].substring(2).isEmpty()) {
-              y -= Integer.parseInt(moves[i].substring(2));
-            }
+          if (dir % 4== 0) {
+            y += distance;
           }
-          if (moves[i].contains("L")) {
-            direction += 3;
-            if (!moves[i].substring(2).isEmpty()) {
-              y += Integer.parseInt(moves[i].substring(2));
-            }
+          if (dir % 4 == 1) {
+            x += distance;
           }
-        }
-
-        if (direction % 4 == 2) {
-          if (moves[i].contains("R")) {
-            direction++;
-            if (!moves[i].substring(2).isEmpty()) {
-              x -= Integer.parseInt(moves[i].substring(2));
-            }
+          if (dir % 4 == 2) {
+            y -= distance;
           }
-          if (moves[i].contains("L")) {
-            direction += 3;
-            if (!moves[i].substring(2).isEmpty()) {
-              x += Integer.parseInt(moves[i].substring(2));
-            }
-          }
-        }
-
-        if (direction % 4 == 3) {
-          if (moves[i].contains("R")) {
-            direction++;
-            if (!moves[i].substring(2).isEmpty()) {
-              y += Integer.parseInt(moves[i].substring(2));
-            }
-          }
-          if (moves[i].contains("L")) {
-            direction += 3;
-            if (!moves[i].substring(2).isEmpty()) {
-              y -= Integer.parseInt(moves[i].substring(2));
-            }
+          if (dir % 4 == 3) {
+            x -= distance;
           }
         }
       }
-    }
       input.close();
       return Math.abs(x) + Math.abs(y);
     }
