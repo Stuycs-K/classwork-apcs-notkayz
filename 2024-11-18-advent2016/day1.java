@@ -15,13 +15,8 @@ public class day1 {
       while (input.hasNextLine()) {
         String line = input.nextLine();
         String[] moves = line.split(",");
-        // for (int i = 0; i < moves.length; i++) {
-        // System.out.println(moves[i]);
-        // }
-
         for (int i = 0; i < moves.length; i++) {
           // System.out.println(moves[i].substring(2));
-          moves[i].trim();
           if (!moves[i].substring(2).isEmpty()) {
             int forwardSteps = Integer.parseInt(moves[i].substring(2));
             String lOrR = moves[0];
