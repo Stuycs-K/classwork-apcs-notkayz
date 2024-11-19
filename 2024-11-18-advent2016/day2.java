@@ -19,11 +19,21 @@ public class day2 {
               digit--;
             }
           }
-          // if (line.charAt(i) == "U") {
-          //   if (!digit % 3 == 1) {
-          //     digit--;
-          //   }
-          // }
+          if (line.charAt(i) == "U") {
+            if (digit < 4) {
+              digit -= 3;
+            }
+          }
+          if (line.charAt(i) == "R") {
+            if (!digit % 3 == 0) {
+              digit++;
+            }
+          }
+          if (line.charAt(i) == "D") {
+            if (digit > 6) {
+              digit -=3;
+            }
+          }
         }
       }
 
