@@ -18,38 +18,66 @@ public class day1 {
         //   System.out.println(moves[i]);
         // }
         for (int i = 0; i < moves.length; i++) {
-          System.out.println(moves[i].substring(2));
-          // if (direction % 4 == 0) {
-          //   if (moves[i].contains("R")) {
-          //     direction++; 
-          //     x += Integer.parseInt(moves[i].substring(1));
-          //   }
-          //   if (moves[i].contains("L")) {
-          //     direction += 3; 
-          //     x -= Integer.parseInt(moves[i].substring(1));
-          //   }
-          // }
+          // System.out.println(moves[i].substring(2));
+          if (direction % 4 == 0) {
+            if (moves[i].contains("R")) {
+              direction++;
+              if (!moves[i].substring(2).isEmpty()) {
+                x += Integer.parseInt(moves[i].substring(2));
+              }
+            }
+            if (moves[i].contains("L")) {
+              direction += 3; 
+              if (!moves[i].substring(2).isEmpty()) {
+                x -= Integer.parseInt(moves[i].substring(2));
+              }
+            }
+          }
 
-          // if (direction % 4 == 2) {
-          //   if (moves[i].contains("R")) {
-          //     direction++; 
-          //     x -= Integer.parseInt(moves[i].substring(1));
-          //   }
-          //   if (moves[i].contains("L")) {
-          //     direction += 3; 
-          //     x += Integer.parseInt(moves[i].substring(1));
-          //   }
-          // }
-          //   if (direction % 4 == 3) {
-          //     if (moves[i].contains("R")) {
-          //       direction++; 
-          //       y += Integer.parseInt(moves[i].substring(1));
-          //     }
-          //     if (moves[i].contains("L")) {
-          //       direction += 3; 
-          //       y -= Integer.parseInt(moves[i].substring(1));
-          //     }
-          // }
+          if (direction % 4 == 1) {
+            if (moves[i].contains("R")) {
+              direction++;
+              if (!moves[i].substring(2).isEmpty()) {
+                y -= Integer.parseInt(moves[i].substring(2));
+              }
+            }
+            if (moves[i].contains("L")) {
+              direction += 3; 
+              if (!moves[i].substring(2).isEmpty()) {
+                y += Integer.parseInt(moves[i].substring(2));
+              }
+            }
+          }
+
+          if (direction % 4 == 2) {
+            if (moves[i].contains("R")) {
+              direction++; 
+              if (!moves[i].substring(2).isEmpty()) {
+                x -= Integer.parseInt(moves[i].substring(2));
+              }
+            }
+            if (moves[i].contains("L")) {
+              direction += 3; 
+              if (!moves[i].substring(2).isEmpty()) {
+                x += Integer.parseInt(moves[i].substring(2));
+              }
+            }
+          }
+
+            if (direction % 4 == 3) {
+              if (moves[i].contains("R")) {
+                direction++; 
+                if (!moves[i].substring(2).isEmpty()) {
+                  y += Integer.parseInt(moves[i].substring(2));
+                }
+              }
+              if (moves[i].contains("L")) {
+                direction += 3; 
+                if (!moves[i].substring(2).isEmpty()) {
+                  y -= Integer.parseInt(moves[i].substring(2));
+                }
+              }
+          }
         }
       }
       input.close();
