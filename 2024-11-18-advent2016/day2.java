@@ -15,25 +15,29 @@ public class day2 {
         // System.out.println(line);
         for (int i = 0; i < line.length(); i++) {
           // System.out.println(line.substring(i, i + 1));
-
+          System.out.println(digit);
           if (line.substring(i, i + 1).equals("L")) {
             if (digit % 3 != 1) {
               digit--;
+              System.out.println(digit);
             }
           }
           if (line.substring(i, i + 1).equals("R")) {
             if (digit % 3 != 0) {
               digit++;
+              System.out.println(digit);
             }
           }
           if (line.substring(i, i + 1).equals("U")) {
             if (digit >= 4) {
               digit -= 3;
+              System.out.println(digit);
             }
           }
           if (line.substring(i, i + 1).equals("D")) {
             if (digit >= 6) {
               digit +=3;
+              System.out.println(digit);
             }
           }
         }
