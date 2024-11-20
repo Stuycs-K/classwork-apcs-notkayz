@@ -7,16 +7,17 @@ public class day4 {
         try {
             File f1 = new File(filename);
             Scanner input = new Scanner(f1);
-            int sum = 0; 
+            int sum = 0;
             while (input.hasNextLine()) {
                 String line = input.nextLine();
                 int[] counter = new int[26];
-                for (int i = 0; i < line.length(); i++) {
+                String[] letters = new String[5];
+                for (int i = 0; i < line.length() - 7; i++) {
                     if (Character.isLetter(line.charAt(i))) {
                         counter[line.charAt(i) - 'a']++;
                         // System.out.println(line.charAt(i));
                     }
-                } 
+                }
                 // System.out.println(Arrays.toString(counter));
             }
 
@@ -29,7 +30,7 @@ public class day4 {
         }
     }
 
-    public static void main (String[] args) { 
+    public static void main (String[] args) {
         System.out.println(solver("day4input.txt"));
     }
 }
