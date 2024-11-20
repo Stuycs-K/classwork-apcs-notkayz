@@ -22,7 +22,7 @@ public class day2 {
             }
           }
           if (line.substring(i, i + 1).equals("U")) {
-            if (digit < 4) {
+            if (digit >= 4) {
               digit -= 3;
             }
           }
@@ -32,8 +32,8 @@ public class day2 {
             }
           }
           if (line.substring(i, i + 1).equals("D")) {
-            if (digit > 6) {
-              digit -=3;
+            if (digit >= 6) {
+              digit +=3;
             }
           }
         }
