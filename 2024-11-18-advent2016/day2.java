@@ -21,14 +21,14 @@ public class day2 {
               digit--;
             }
           }
-          if (line.substring(i, i + 1).equals("U")) {
-            if (digit >= 4) {
-              digit -= 3;
-            }
-          }
           if (line.substring(i, i + 1).equals("R")) {
             if (digit % 3 != 0) {
               digit++;
+            }
+          }
+          if (line.substring(i, i + 1).equals("U")) {
+            if (digit >= 4) {
+              digit -= 3;
             }
           }
           if (line.substring(i, i + 1).equals("D")) {
@@ -46,7 +46,7 @@ public class day2 {
     }
     catch (FileNotFoundException ex) {
       System.out.println("FIle not found");
-      return "no passcode";
+      return "null";
     }
   }
 
