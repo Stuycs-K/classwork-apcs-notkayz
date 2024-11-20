@@ -8,33 +8,37 @@ public class day2 {
       File f1 = new File(filename);
       Scanner input = new Scanner(f1);
       String passcode = "";
+      int digit = 5;
 
       while(input.hasNextLine()) {
-        int digit = 5;
         String line = input.nextLine();
         // System.out.println(line);
         for (int i = 0; i < line.length(); i++) {
-          if (line.charAt(i) == "L") {
-            if (!digit % 3 == 1) {
+          // System.out.println(line.substring(i, i + 1));
+
+          if (line.substring(i, i + 1).equals("L")) {
+            if (digit % 3 != 1) {
               digit--;
             }
           }
-          if (line.charAt(i) == "U") {
+          if (line.substring(i, i + 1).equals("U")) {
             if (digit < 4) {
               digit -= 3;
             }
           }
-          if (line.charAt(i) == "R") {
-            if (!digit % 3 == 0) {
+          if (line.substring(i, i + 1).equals("R")) {
+            if (digit % 3 != 0) {
               digit++;
             }
           }
-          if (line.charAt(i) == "D") {
+          if (line.substring(i, i + 1).equals("D")) {
             if (digit > 6) {
               digit -=3;
             }
           }
         }
+        // System.out.println(digit);
+        passcode += Integer.toString(digit);
       }
 
       input.close();
