@@ -39,7 +39,7 @@ public class day6 {
             maxIndex = k;
           }
         }
-        System.out.println(maxIndex);
+        // System.out.println(maxIndex);
         int result = 'a' + maxIndex;
         message += (char) result;
       }
