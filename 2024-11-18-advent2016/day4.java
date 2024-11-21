@@ -32,13 +32,13 @@ public class day4 {
                 }
                 boolean checksum = false;
                 // System.out.println(line.substring(line.length() - 6, line.length() - 1));                the checksum
+                // System.out.println(line.charAt(line.length() - 6));
+                String frequentLetters = "";
                 for (int i = 0; i < letters.length; i++) {
-                    if (letters[i].equals(line.charAt(line.length() - 6 + i))) {
-                        checksum = true;
-                    }
-                    else {
-                        checksum = false;
-                    }
+                    frequentLetters += letters[i];
+                }
+                if (frequentLetters.equals(line.substring(line.length() - 6, line.length() - 1))) {
+                    checksum = true;
                 }
                 // System.out.println(checksum);
                 // System.out.println(line.substring(line.length() - 10, line.length() - 7));               the numbers
