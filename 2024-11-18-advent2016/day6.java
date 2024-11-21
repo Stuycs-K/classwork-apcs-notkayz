@@ -10,8 +10,29 @@ public class day6 {
       File f1 = new File(filename);
       Scanner input = new Scanner(f1);
       String message = "";
+      int rows = 0, columns  = 0;
+      while (input.hasNextLine()) {
+        String line = input.nextLine();
+        columns = line.length();
+        rows++;
+      }
+      Character[][] ary = new Character[rows][columns];
 
-      
+      input = new Scanner(f1);      // refill the input because it has been used
+      int rows2 = 0;
+      while (input.hasNextLine()) {
+        String line = input.nextLine();
+        for (int i = 0; i < columns; i++) {
+          ary[rows2][i] = line.charAt(i);
+        }
+        rows2++;
+      }
+      for (int i = 0; i < ary.length; i ++) {
+        for (int j = 0; j < ary[i].length; j++) {
+          System.out.println(ary[i][j] + " ");
+        }
+        System.out.println();
+      }
       input.close();
       return message;
     }
