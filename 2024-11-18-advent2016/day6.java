@@ -27,13 +27,17 @@ public class day6 {
         rows2++;
       }
       
-      // int[] counter = new int[26];
+      int[] counter = new int[26];
       String message = "";
-      // for (int i = 0; i < columns; i++) {
-
-      // }
+      for (int i = 0; i < columns; i++) {
+        for (int j = 0; j < rows; j++) {
+          counter[ary[j][i] - 'a']++;
+        }
+        System.out.println(Arrays.toString(counter));
+      }
+      // System.out.println(Arrays.toString(counter));
       
-      System.out.println(Arrays.deepToString(ary));
+      // System.out.println(Arrays.deepToString(ary));
       input.close();
       return message;
     }
