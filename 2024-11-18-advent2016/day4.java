@@ -31,11 +31,18 @@ public class day4 {
                     letters[i] = (char) result;
                 }
                 boolean checksum = false;
-                System.out.println(line.substring(line.length() - 7, line.length()));
-                // for (int i = 0; i < letters.length; i++) {
-                //     if (letters[i].equals(line.charAt(line.length() - 7 + i))) {
-
-                //     }
+                // System.out.println(line.substring(line.length() - 6, line.length() - 1));                the checksum
+                for (int i = 0; i < letters.length; i++) {
+                    if (letters[i].equals(line.charAt(line.length() - 6 + i))) {
+                        checksum = true;
+                    }
+                    else {
+                        checksum = false;
+                    }
+                }
+                System.out.println(line.substring(line.length() - 10, line.length() - 7));
+                // if (checksum) {
+                //     sum += Integer.parseInt(line.substring(, ))
                 // }
                 // System.out.println(Arrays.toString(letters));
                 // System.out.println(maxIndex);
