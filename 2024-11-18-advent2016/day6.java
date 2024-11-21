@@ -26,14 +26,22 @@ public class day6 {
         }
         rows2++;
       }
-      
-      int[] counter = new int[26];
       String message = "";
       for (int i = 0; i < columns; i++) {
+        int[] counter = new int[26];
         for (int j = 0; j < rows; j++) {
           counter[ary[j][i] - 'a']++;
         }
-        System.out.println(Arrays.toString(counter));
+        // System.out.println(Arrays.toString(counter));
+        int maxIndex = 0; 
+        for (int k = 0; k < counter.length; k++) {
+          if (counter[k] > counter[maxIndex]) {
+            maxIndex = k;
+          }
+        }
+        System.out.println(maxIndex);
+        int result = 'a' + maxIndex;
+        message += (char) result;
       }
       // System.out.println(Arrays.toString(counter));
       
