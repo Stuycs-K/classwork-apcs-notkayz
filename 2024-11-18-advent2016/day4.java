@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class day4 {
@@ -11,7 +12,7 @@ public class day4 {
             while (input.hasNextLine()) {
                 String line = input.nextLine();
                 int[] counter = new int[26];
-                String[] letters = new String[5];
+                Character[] letters = new Character[5];
                 for (int i = 0; i < line.length() - 7; i++) {
                     if (Character.isLetter(line.charAt(i))) {
                         counter[line.charAt(i) - 'a']++;
@@ -19,12 +20,18 @@ public class day4 {
                     }
                 }
                 int maxIndex = 0;
-                for (int i = 1; i < counter.length; i++) {
-                    if (counter[i] > counter[maxIndex]) {
-                        maxIndex = i;
+                for (int i = 0; i < letters.length; i++) {
+                    for (int j = 0; j < counter.length; j++) {
+                        if (counter[j] > counter[maxIndex]) {
+                            maxIndex = j;
+                        }
                     }
+                    counter[maxIndex] = 0;
+                    int result = 'a' + maxIndex;
+                    letters[i] = (char) result;
                 }
-                System.out.println(maxIndex);
+                // System.out.println(Arrays.toString(letters));
+                // System.out.println(maxIndex);
                 // System.out.println(Arrays.toString(counter));
             }
 
