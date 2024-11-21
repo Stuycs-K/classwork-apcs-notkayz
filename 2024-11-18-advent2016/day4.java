@@ -40,10 +40,11 @@ public class day4 {
                         checksum = false;
                     }
                 }
-                System.out.println(line.substring(line.length() - 10, line.length() - 7));
-                // if (checksum) {
-                //     sum += Integer.parseInt(line.substring(, ))
-                // }
+                // System.out.println(checksum);
+                // System.out.println(line.substring(line.length() - 10, line.length() - 7));               the numbers
+                if (checksum) {
+                    sum += Integer.parseInt(line.substring(line.length() - 10, line.length() - 7));            
+                }
                 // System.out.println(Arrays.toString(letters));
                 // System.out.println(maxIndex);
                 // System.out.println(Arrays.toString(counter));
