@@ -30,6 +30,13 @@ public class day4 {
                     int result = 'a' + maxIndex;
                     letters[i] = (char) result;
                 }
+                boolean checksum = false;
+                System.out.println(line.substring(line.length() - 7, line.length()));
+                // for (int i = 0; i < letters.length; i++) {
+                //     if (letters[i].equals(line.charAt(line.length() - 7 + i))) {
+
+                //     }
+                // }
                 // System.out.println(Arrays.toString(letters));
                 // System.out.println(maxIndex);
                 // System.out.println(Arrays.toString(counter));
