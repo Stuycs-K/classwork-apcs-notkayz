@@ -18,6 +18,13 @@ public class day4 {
                         // System.out.println(line.charAt(i));
                     }
                 }
+                int maxIndex = 0;
+                for (int i = 1; i < counter.length; i++) {
+                    if (counter[i] > counter[maxIndex]) {
+                        maxIndex = i;
+                    }
+                }
+                System.out.println(maxIndex);
                 // System.out.println(Arrays.toString(counter));
             }
 
