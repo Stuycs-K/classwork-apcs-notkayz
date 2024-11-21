@@ -9,7 +9,6 @@ public class day6 {
     try {
       File f1 = new File(filename);
       Scanner input = new Scanner(f1);
-      String message = "";
       int rows = 0, columns  = 0;
       while (input.hasNextLine()) {
         String line = input.nextLine();
@@ -27,12 +26,14 @@ public class day6 {
         }
         rows2++;
       }
-      for (int i = 0; i < ary.length; i ++) {
-        for (int j = 0; j < ary[i].length; j++) {
-          System.out.println(ary[i][j] + " ");
-        }
-        System.out.println();
-      }
+      
+      // int[] counter = new int[26];
+      String message = "";
+      // for (int i = 0; i < columns; i++) {
+
+      // }
+      
+      System.out.println(Arrays.deepToString(ary));
       input.close();
       return message;
     }
