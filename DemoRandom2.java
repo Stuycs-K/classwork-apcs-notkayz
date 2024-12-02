@@ -6,7 +6,7 @@ public class DemoRandom2{
     //this can be used to produce a random seed for a different Random object!
     Random rng = new Random();
     int seed = rng.nextInt();
-    //seed = -1044212732;
+    seed = -1044212732;
 
     System.out.println("The seed: "+seed);
     rng = new Random(seed);
