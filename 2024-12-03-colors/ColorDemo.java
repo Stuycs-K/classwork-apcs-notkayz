@@ -16,8 +16,13 @@ public class ColorDemo {
   public static int CYAN = 36;
   public static int WHITE = 37;
 
+  public static int[] colors = new int[] {30, 31, 32, 33, 34, 35, 36, 37};
+
   public static void makeScreenRainbow() {
-    
+    for (int i = 0; i < colors.length; i++) {
+      System.out.print("\u001b[" + colors[i] + "m");
+      System.out.println("Hi");
+    }
   }
 
   public static void main (String[] args) {
