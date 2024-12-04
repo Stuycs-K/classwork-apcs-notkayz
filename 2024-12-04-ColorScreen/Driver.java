@@ -50,6 +50,12 @@ public class Driver {
             System.out.print("=");
         }
     }
+
+    public static void drawAngry(int colorID) {
+        Text.color(colorID);
+        Text.go(15,41);
+        System.out.print(">:(");
+    }
     public static void main (String[] args) {
         System.out.print(Text.CLEAR_SCREEN);
         System.out.print(Text.HIDE_CURSOR);
