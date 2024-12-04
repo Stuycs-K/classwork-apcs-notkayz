@@ -18,13 +18,6 @@ public class Driver {
             Text.go(81, i);
             System.out.print("-");
         }
-        // for (int i = 0; i < 30; i++) {
-        //     System.out.print("=");
-        // }
-        // Text.go(81, 1);
-        // for (int i = 0; i < 30; i++) {
-        //     System.out.print("-");
-        // }
     }
     public static void main (String[] args) {
         System.out.print(Text.CLEAR_SCREEN);
