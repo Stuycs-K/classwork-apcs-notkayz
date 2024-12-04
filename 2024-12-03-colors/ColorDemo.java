@@ -22,11 +22,11 @@ public class ColorDemo {
     for (int i = 0; i < colors.length; i++) {
       System.out.print("\u001b[" + colors[i] + "m");
       System.out.print("\u001b[" + (colors[i] + 10) + "m");
-      for (int j = 0; j < 100; j++) {
-        System.out.print("______");
+      for (int j = 0; j < 10; j++) {
+        System.out.println("______");
       }
-      System.out.println();
     }
+    System.out.print("\u001b[0m");
   }
 
   public static void makeMyTextColorful(String text, String rgbOrUnix) {
@@ -37,9 +37,9 @@ public class ColorDemo {
       }
     }
     else if (rgbOrUnix.equals("rgb")) {
-      for(int r = 0; r < 256; r+=16){
-        for(int g = 0; g <= 256; g+=16){
-          for(int b = 0; b <= 256; b+=16){
+      for(int r = 0; r < 256; r+=1){
+        for(int g = 0; g <= 256; g+=1){
+          for(int b = 0; b <= 256; b+=1){
             System.out.print("\u001b[38;2;"+r+";"+g+";"+b+";7m");
             System.out.print(text + "  ");
           }
@@ -49,11 +49,12 @@ public class ColorDemo {
     else {
       System.out.println("Not A Valid Type");
     }
+    System.out.print("\u001b[0m");
   }
 
   public static void main (String[] args) {
     // System.out.print(CLEAR_SCREEN);
-    // makeScreenRainbow();
-    makeMyTextColorful("yea you suck", "unix");
+    makeScreenRainbow();
+    makeMyTextColorful("hahahahahaha", "unix");
   }
 }
