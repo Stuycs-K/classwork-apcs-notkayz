@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Driver {
 
     public static void makeBorder(int colorID) {
@@ -19,11 +20,21 @@ public class Driver {
             System.out.print("-");
         }
     }
+
+    public static int[] randomArray(int size) {
+        int[] res = new int[size];
+        for (int x: res) {
+            x = (int) Math.random() * 100;
+        }
+        return res;
+    }
     public static void main (String[] args) {
         System.out.print(Text.CLEAR_SCREEN);
         System.out.print(Text.HIDE_CURSOR);
 
         makeBorder(34);
+
+        System.out.println(Arrays.toString(randomArray(3)));
         System.out.println(Text.RESET);
     }
 }
