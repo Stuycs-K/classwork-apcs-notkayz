@@ -72,7 +72,7 @@ public class Driver {
         // making the border has to be last 
         makeBorder(34);
         
-        
+        Text.go(31,1);
         // System.out.println(Arrays.toString(x));
         
         System.out.println(Text.RESET);
