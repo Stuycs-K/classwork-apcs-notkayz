@@ -54,7 +54,7 @@ public class Driver {
     public static void writeInput(String input, int colorID) {
         Text.color(colorID);
         int halfLength = input.length() / 2;
-        Text.go(31 - halfLength,81);
+        Text.go(16, 41 - halfLength);
         System.out.print(input);
     }
     public static void main (String[] args) {
