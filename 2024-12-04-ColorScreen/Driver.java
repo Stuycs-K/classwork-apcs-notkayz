@@ -23,8 +23,8 @@ public class Driver {
 
     public static int[] randomArray(int size) {
         int[] res = new int[size];
-        for (int x: res) {
-            x = (int) Math.random() * 100;
+        for (int i = 0; i < res.length; i++) {
+            res[i] = (int) Math.random() * 100;
         }
         return res;
     }
