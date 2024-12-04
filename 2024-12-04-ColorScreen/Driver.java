@@ -42,6 +42,14 @@ public class Driver {
             System.out.print(ary[i - 1]);
         }
     }
+
+    public static void addDivider(int colorID) {
+        Text.color(Text.background(colorID));
+        for (int i = 2; i <= 80; i++ ) {
+            Text.go(3, i);
+            System.out.print("=");
+        }
+    }
     public static void main (String[] args) {
         System.out.print(Text.CLEAR_SCREEN);
         System.out.print(Text.HIDE_CURSOR);
@@ -49,7 +57,11 @@ public class Driver {
         int[] x = randomArray(3);
 
         displayEvenlySpaced(x);
+        addDivider(33);
+        
+        // making the border has to be last 
         makeBorder(34);
+        
         
         // System.out.println(Arrays.toString(x));
         
