@@ -51,10 +51,11 @@ public class Driver {
         }
     }
 
-    public static void drawAngry(int colorID) {
+    public static void writeInput(String input, int colorID) {
         Text.color(colorID);
-        Text.go(15,41);
-        System.out.print(">:(");
+        int halfLength = input.length() / 2;
+        Text.go(31 - halfLength,81);
+        System.out.print(input);
     }
     public static void main (String[] args) {
         System.out.print(Text.CLEAR_SCREEN);
@@ -64,6 +65,7 @@ public class Driver {
 
         displayEvenlySpaced(x);
         addDivider(33);
+        writeInput("Hello!",37);
         
         // making the border has to be last 
         makeBorder(34);
