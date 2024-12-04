@@ -24,7 +24,8 @@ public class Driver {
     public static int[] randomArray(int size) {
         int[] res = new int[size];
         for (int i = 0; i < res.length; i++) {
-            res[i] = (int) Math.random() * 100;
+            res[i] = (int) (Math.random() * 100);
+            // System.out.println(res[i]);
         }
         return res;
     }
