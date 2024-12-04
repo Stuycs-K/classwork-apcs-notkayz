@@ -29,13 +29,20 @@ public class Driver {
         }
         return res;
     }
+
+    public static void displayEvenlySpaced(int[] ary) {
+        for (int i = 0; i < 3; i++) {
+            Text.go(2, (20 * i));
+            System.out.print(ary[i]);
+        }
+    }
     public static void main (String[] args) {
         System.out.print(Text.CLEAR_SCREEN);
         System.out.print(Text.HIDE_CURSOR);
 
         makeBorder(34);
-
-        System.out.println(Arrays.toString(randomArray(3)));
+        int[] x = randomArray(3);
+        // System.out.println(Arrays.toString(x));
         System.out.println(Text.RESET);
     }
 }
