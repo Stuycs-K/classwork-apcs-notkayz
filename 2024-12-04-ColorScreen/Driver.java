@@ -51,7 +51,7 @@ public class Driver {
         }
     }
 
-    public static void writeInput(String input, int colorID) {
+    public static void writeInputCenter(String input, int colorID) {
         Text.color(colorID);
         int halfLength = input.length() / 2;
         Text.go(16, 41 - halfLength);
@@ -65,8 +65,10 @@ public class Driver {
 
         displayEvenlySpaced(x);
         addDivider(33);
-        writeInput("Hello!",37);
-        
+        // writeInput("Hello!",37);
+        // writeInput("Are you sure?!",37);
+        writeInputCenter("What are you doing!?",37);
+
         // making the border has to be last 
         makeBorder(34);
         
