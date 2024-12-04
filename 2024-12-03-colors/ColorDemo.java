@@ -21,8 +21,9 @@ public class ColorDemo {
   public static void makeScreenRainbow() {
     for (int i = 0; i < colors.length; i++) {
       System.out.print("\u001b[" + colors[i] + "m");
+      System.out.print("\u001b[" + (colors[i] + 10) + "m");
       for (int j = 0; j < 100; j++) {
-        System.out.print("HELLO");
+        System.out.print("______");
       }
       System.out.println();
     }
