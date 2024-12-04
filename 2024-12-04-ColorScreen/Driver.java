@@ -33,6 +33,12 @@ public class Driver {
     public static void displayEvenlySpaced(int[] ary) {
         for (int i = 1; i <= 3; i++) {
             Text.go(2, (20 * i));
+            if(ary[i - 1] > 75) {
+                Text.color(Text.GREEN, Text.BRIGHT);
+            }
+            if(ary[i - 1] < 25) {
+                Text.color(Text.RED, Text.BRIGHT);
+            }
             System.out.print(ary[i - 1]);
         }
     }
@@ -41,7 +47,7 @@ public class Driver {
         System.out.print(Text.HIDE_CURSOR);
 
         int[] x = randomArray(3);
-        
+
         displayEvenlySpaced(x);
         makeBorder(34);
         
