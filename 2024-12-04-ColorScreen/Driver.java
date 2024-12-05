@@ -62,15 +62,15 @@ public class Driver {
         System.out.print(Text.HIDE_CURSOR);
 
         int[] x = randomArray(3);
-
         displayEvenlySpaced(x);
-        addDivider(33);
+        addDivider(Text.YELLOW);
+
         // writeInput("Hello!",37);
         // writeInput("Are you sure?!",37);
         writeInputCenter("What are you doing!?",37);
 
         // making the border has to be last 
-        makeBorder(34);
+        makeBorder(Text.BLUE);
         
         Text.go(31,1);
         // System.out.println(Arrays.toString(x));
