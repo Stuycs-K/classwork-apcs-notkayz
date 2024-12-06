@@ -20,10 +20,12 @@ public class Mage extends Adventurer{
   }
 
   public void setSpecial(int n) {
-    if (n < maxMana) {
+    if (n > this.maxMana) {
       this.mana = n;
     }
-    System.out.println("Value exceeds maximum value!");
+    else {
+      System.out.println("Value exceeds maximum value!");
+    }
   }
 
   public int getSpecialMax() {
