@@ -1,4 +1,4 @@
-abstract public class Mage extends Adventurer{
+public class Mage extends Adventurer{
   
   // instance variables
   private int mana, maxMana;
