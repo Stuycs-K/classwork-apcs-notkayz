@@ -9,10 +9,18 @@ public class Mage extends {
   public int getSpecial() {
     return this.mana;
   }
+
   public void setSpecial(int n) {
     this.mana = n;
   }
+
   public int getSpecialMax() {
     return this.maxMana;
+  }
+
+  //
+  public String attack(Adventurer other) {
+    other.applyDamage(this.mana);
+    return "Hit " + other.getName() + "for " + mana + " damage!";
   }
 }
