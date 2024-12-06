@@ -1,5 +1,5 @@
 import java.util.Random;
-public abstract class Adventurer{
+public abstract class Adventurer implements Mage {
   private String name;
   private int HP,maxHP;
 
