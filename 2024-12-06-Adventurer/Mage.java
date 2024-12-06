@@ -25,7 +25,13 @@ public class Mage extends {
   }
 
   public String support(Adventurer other) {
+    if (other.getHP() + (mana / 2) > other.getmaxHP()) {
+      other.setmaxHP(other.getmaxHP() + (mana / 2));
+      return "Buffed "
+    }
     other.setHP(other.getHp() + (mana / 2));
     return "Healed " + other.getName() + " for " + (mana / 2) + " health.";
   }
+
+  public String support()
 }
