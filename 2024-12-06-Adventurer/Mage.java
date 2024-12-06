@@ -6,7 +6,7 @@ abstract public class Mage extends Adventurer{
   // no arg constructor
   public Mage() {
     super("Mage", 100);
-    int mana = 100;
+    int mana = 200;
     int maxMana = 500;
   }
 
@@ -51,5 +51,11 @@ abstract public class Mage extends Adventurer{
     }
     this.setHP(this.getHP() + (mana / 2));
     return "Healed myself for " + (mana / 2) + " health.";
+  }
+
+  public String specialAttack(Adventurer other) {
+    this.mana = mana / 2;
+    other.applyDamage(mana);
+    return "Special Attack dealt " + mana + " damage to " + other.getName() + ", but your mana was halved.";
   }
 }
