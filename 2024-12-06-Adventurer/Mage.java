@@ -21,6 +21,11 @@ public class Mage extends {
   //
   public String attack(Adventurer other) {
     other.applyDamage(this.mana);
-    return "Hit " + other.getName() + "for " + mana + " damage!";
+    return "Hit " + other.getName() + " for " + mana + " damage!";
+  }
+
+  public String support(Adventurer other) {
+    other.setHP(other.getHp() + (mana / 2));
+    return "Healed " + other.getName() + " for " + (mana / 2) + " health.";
   }
 }
