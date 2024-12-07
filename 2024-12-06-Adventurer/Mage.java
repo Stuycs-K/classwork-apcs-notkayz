@@ -52,10 +52,10 @@ public class Mage extends Adventurer{
     if (this.getHP() + (mana / 2) > this.getmaxHP()) {
       this.setmaxHP(this.getmaxHP() + (mana / 2));
       this.setHP(this.getHP() + (mana / 2));
-      return "Increase my max hp by " + (mana / 2) + "!";
+      return "Increased your max hp by " + (mana / 2) + "!";
     }
     this.setHP(this.getHP() + (mana / 2));
-    return "Healed myself for " + (mana / 2) + " health.";
+    return "Healed yourself for " + (mana / 2) + " health.";
   }
 
   public String specialAttack(Adventurer other) {
