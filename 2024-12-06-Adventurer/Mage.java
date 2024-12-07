@@ -20,7 +20,7 @@ public class Mage extends Adventurer{
   }
 
   public void setSpecial(int n) {
-    if (n > this.maxMana) {
+    if (n < this.maxMana) {
       this.mana = n;
     }
     else {
