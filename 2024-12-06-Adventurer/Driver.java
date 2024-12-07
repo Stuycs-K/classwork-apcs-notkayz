@@ -15,5 +15,8 @@ public class Driver {
     player1.setSpecial(400);  // changes player 1's mana to 400
     System.out.println("Player 1 has " + player1.getSpecial() + " mana.");
 
+    player1.setSpecial(501); // should be 400 because 501 > the max
+    System.out.println("Player 1 has " + player1.getSpecial() + " mana.");  
+
   }
 }
