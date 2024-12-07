@@ -5,7 +5,7 @@ public class Mage extends Adventurer{
 
   // no arg constructor
   public Mage() {
-    super("Mage", 100);
+    super("Mage", 1000);
     mana = 200;
     maxMana = 500;
   }
