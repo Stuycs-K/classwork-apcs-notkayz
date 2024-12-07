@@ -59,8 +59,14 @@ public class Mage extends Adventurer{
   }
 
   public String specialAttack(Adventurer other) {
-    this.mana = mana / 2;
-    other.applyDamage(mana);
-    return "Special Attack dealt " + mana + " damage to " + other.getName() + ", but your mana was halved.";
+    int tempMana;
+    if (this.mana * 2 < this.maxMana) {
+      tempMana = mana * 2;
+    }
+    else {
+      tempMana = maxMana;
+    }
+    other.applyDamage(tempMana);
+    return "Special Attack dealt " + tempMana + " damage to " + other.getName();
   }
 }
