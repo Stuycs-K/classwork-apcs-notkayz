@@ -1,5 +1,5 @@
 public class Mage extends Adventurer{
-  
+
   // instance variables
   private int mana, maxMana;
 
@@ -12,7 +12,7 @@ public class Mage extends Adventurer{
 
   //accessor methods
   public String getSpecialName() {
-    return "Sorcerer";
+    return "mana";
   }
 
   public int getSpecial() {
@@ -67,6 +67,7 @@ public class Mage extends Adventurer{
       tempMana = maxMana;
     }
     other.applyDamage(tempMana);
+    mana = mana / 2;
     return "Special Attack dealt " + tempMana + " damage to " + other.getName();
   }
 }
