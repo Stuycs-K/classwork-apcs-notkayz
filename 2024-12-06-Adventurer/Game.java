@@ -26,6 +26,16 @@ public class Game {
       if (action1.equals("quit")) {
         quit = true;
       }
+      int randomAction = (int) (Math.random() * 3);
+      if (randomAction == 0) {
+        System.out.println(a2.attack(a1));
+      }
+      if (randomAction == 1) {
+        System.out.println(a2.specialAttack(a1));
+      }
+      if (randomAction == 2) {
+        System.out.println(a2.support());
+      }
     }
   }
 }
