@@ -26,6 +26,10 @@ public class Game {
       if (action1.equals("quit")) {
         quit = true;
       }
+      if (a2.getHP() <= 0) {
+        quit = true;
+        System.out.println(a1 + " wins!");
+      }
       int randomAction = (int) (Math.random() * 3);
       if (randomAction == 0) {
         System.out.println(a2.attack(a1));
@@ -35,6 +39,10 @@ public class Game {
       }
       if (randomAction == 2) {
         System.out.println(a2.support());
+      }
+      if (a1.getHP() <= 0) {
+        quit = true;
+        System.out.println(a2 + " wins!");
       }
     }
   }
