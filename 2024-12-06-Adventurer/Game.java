@@ -14,7 +14,7 @@ public class Game {
       Scanner userInput = new Scanner(System.in);
       System.out.println("Enter an action: (a)ttack / (sp)ecial / (su)pport / quit ");
       String action1 = userInput.nextLine();
-      if (action1 == 'a' || action1.equals("attack")) {
+      if (action1.equals("a") || action1.equals("attack")) {
         System.out.println(a1.attack(a2));
       }
       if (action1.equals("sp") || action1.equals("special")) {
