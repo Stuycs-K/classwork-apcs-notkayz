@@ -15,7 +15,7 @@ public class Mage extends Adventurer{
   }
 
   public Mage(String name){
-    this(name,100);
+    this(name,1000);
   }
 
   // no arg constructor
