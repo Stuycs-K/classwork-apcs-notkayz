@@ -3,11 +3,24 @@ public class Mage extends Adventurer{
   // instance variables
   private int mana, maxMana;
 
+  // constructors
+  public Mage(String name, int hp, int mana){
+    super(name,hp);
+    this.mana = mana;
+    this.maxMana = 500;
+  }
+
+  public Mage(String name, int hp){
+    this(name,hp, 200);
+  }
+
+  public Mage(String name){
+    this(name,100);
+  }
+
   // no arg constructor
-  public Mage() {
-    super("Mage", 1000);
-    mana = 200;
-    maxMana = 500;
+  public Mage(){
+    this("Sorcerer");
   }
 
   //accessor methods
