@@ -13,7 +13,7 @@ public class DemoCounter2 {
     public static void main(String[] args) {
         int[] nums = new int[] {2, 7, 18, 4, 5};
 
-        // 14, 0, 18, 4, 3
+        // 14, 0, 18, 4, 5
         arrayMixer(nums);
         System.out.println(Arrays.toString(nums));
     }
