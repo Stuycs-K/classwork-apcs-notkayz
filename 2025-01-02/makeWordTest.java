@@ -6,11 +6,12 @@ public class makeWordTest {
         }
         else {
             for (int i = 0; i < alphabet.length(); i++) {
-                
+                makeWords(remainingLetters - 1, result += alphabet.charAt(i), alphabet);
             }
         }
     }
 
     public static void main(String[] args) {
+        makeWords(2, "", "abc");
     }
 }
